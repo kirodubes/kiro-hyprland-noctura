@@ -6,12 +6,12 @@
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
 #
 # Purpose:
-#   Session entrypoint for the Kiro Hyprland (noctalia) edition, invoked by
-#   kiro-hyprland-noctalia.desktop. Launches Hyprland pointed at this edition's
-#   own config folder (~/.config/kiro-hyprland-noctalia/hyprland.lua) via the
+#   Session entrypoint for the Kiro Hyprland (noctura) edition, invoked by
+#   kiro-hyprland-noctura.desktop. Launches Hyprland pointed at this edition's
+#   own config folder (~/.config/kiro-hyprland-noctura/hyprland.lua) via the
 #   --config flag, so it never reads ~/.config/hypr/.
 # Why:
-#   kiro-hyprland-noctalia and the waybar-based kiro-hyprland edition both target
+#   kiro-hyprland-noctura and the waybar-based kiro-hyprland edition both target
 #   Hyprland but ship different configs. Sharing ~/.config/hypr/ means switching
 #   editions inherits the other one's stale config. Pointing Hyprland at a
 #   per-edition config folder keeps them cleanly separate and co-installable.
@@ -22,4 +22,4 @@
 #   --config flag still points Hyprland at this edition's own config folder.
 #####################################################################
 
-exec uwsm start -- Hyprland --config "$HOME/.config/kiro-hyprland-noctalia/hyprland.lua" "$@"
+exec uwsm start -- Hyprland --config "$HOME/.config/kiro-hyprland-noctura/hyprland.lua" "$@"
