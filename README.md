@@ -1,4 +1,4 @@
-# kiro-hyprland-noctalia
+# kiro-hyprland-noctura
 
 The **Kiro Hyprland (noctalia) edition** — the Hyprland member of the KIROTUX
 Wayland line, paired with the **noctalia-shell** desktop shell. Public,
