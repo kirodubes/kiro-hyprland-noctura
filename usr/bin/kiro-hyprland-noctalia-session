@@ -1,0 +1,25 @@
+#!/bin/sh
+#####################################################################
+# Author    : Erik Dubois
+# Website   : https://kiroproject.be
+#####################################################################
+#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
+#
+# Purpose:
+#   Session entrypoint for the Kiro Hyprland (noctalia) edition, invoked by
+#   kiro-hyprland-noctalia.desktop. Launches Hyprland pointed at this edition's
+#   own config folder (~/.config/kiro-hyprland-noctalia/hyprland.lua) via the
+#   --config flag, so it never reads ~/.config/hypr/.
+# Why:
+#   kiro-hyprland-noctalia and the waybar-based kiro-hyprland edition both target
+#   Hyprland but ship different configs. Sharing ~/.config/hypr/ means switching
+#   editions inherits the other one's stale config. Pointing Hyprland at a
+#   per-edition config folder keeps them cleanly separate and co-installable.
+#   Launched through uwsm (Universal Wayland Session Manager) rather than a bare
+#   Hyprland exec: Hyprland (0.49+) shows a persistent on-screen banner nagging
+#   that it was started WITHOUT uwsm, and uwsm is the upstream-recommended launch
+#   method (it sets up the systemd user session + imports the environment). The
+#   --config flag still points Hyprland at this edition's own config folder.
+#####################################################################
+
+exec uwsm start -- Hyprland --config "$HOME/.config/kiro-hyprland-noctalia/hyprland.lua" "$@"
