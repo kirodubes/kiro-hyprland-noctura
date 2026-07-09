@@ -1,7 +1,7 @@
-# kiro-hyprland-noctalia — Claude project instructions
+# kiro-hyprland-noctura — Claude project instructions
 
 ## Overview
-Config package for the **Kiro Hyprland (noctalia) edition** — the Hyprland member
+Config package for the **Kiro Hyprland (noctura) edition** — the Hyprland member
 of the KIROTUX Wayland line paired with noctalia-shell (sibling to
 [kiro-niri-noctalia](../kiro-niri-noctalia/CLAUDE.md) and the waybar-based
 [kiro-hyprland](../kiro-hyprland/CLAUDE.md)). **Public, open-core**, shipped via
@@ -12,7 +12,7 @@ of the KIROTUX Wayland line paired with noctalia-shell (sibling to
 - **Compositor:** Hyprland (wlroots-family, tiling). Config reused from the
   `kiro-hyprland` edition, waybar stack swapped for noctalia.
 - **Config language:** Lua (`hl.*` API, Hyprland 0.55+). Single file
-  `etc/skel/.config/kiro-hyprland-noctalia/hyprland.lua` (monolithic, like the
+  `etc/skel/.config/kiro-hyprland-noctura/hyprland.lua` (monolithic, like the
   waybar edition — not split into modules).
 - **Desktop shell:** **noctalia-shell** (Quickshell v4) — bar, launcher, lock,
   notifications, wallpaper, control center, session menu, polkit agent (via its
@@ -22,9 +22,9 @@ of the KIROTUX Wayland line paired with noctalia-shell (sibling to
   event). Launches `qs -c noctalia-shell`, `xdg-user-dirs-update`, the gsettings
   import, dbus/systemd env propagation, and the archiso-gated Calamares line.
 - **Coexistence (the key design point):** namespaced. Config in
-  `~/.config/kiro-hyprland-noctalia/`; the `kiro-hyprland-noctalia-session`
-  wrapper runs `Hyprland --config ~/.config/kiro-hyprland-noctalia/hyprland.lua`;
-  own `kiro-hyprland-noctalia.desktop` session entry. **No `conflicts=`** — all
+  `~/.config/kiro-hyprland-noctura/`; the `kiro-hyprland-noctura-session`
+  wrapper runs `Hyprland --config ~/.config/kiro-hyprland-noctura/hyprland.lua`;
+  own `kiro-hyprland-noctura.desktop` session entry. **No `conflicts=`** — all
   Kiro editions install together and are picked per-login. Hyprland is launched
   directly (no systemd service), so `--config` is enough; the niri editions need
   the `NIRI_CONFIG` env var only because niri starts via `systemctl`.
@@ -68,8 +68,8 @@ of the KIROTUX Wayland line paired with noctalia-shell (sibling to
   niri editions hide `niri.desktop`).
 
 ## Build / delivery
-- Source-of-truth for the config; delivered as the `kiro-hyprland-noctalia`
-  package via `../KIROTUX-PKG-BUILD/kiro-hyprland-noctalia/build.sh` (public
+- Source-of-truth for the config; delivered as the `kiro-hyprland-noctura`
+  package via `../KIROTUX-PKG-BUILD/kiro-hyprland-noctura/build.sh` (public
   recipe → `~/EDU/nemesis_repo/`). After editing here: rebuild the package, then
   the ISO to test a fresh install.
 - See [../CLAUDE.md](../CLAUDE.md) for the full KIROTUX delivery architecture.
