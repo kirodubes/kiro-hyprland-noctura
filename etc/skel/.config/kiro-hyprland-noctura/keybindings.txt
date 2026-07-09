@@ -1,6 +1,6 @@
 ###############################################################################
-#  KEYBINDINGS — Kiro Hyprland (noctalia)
-#  Source: etc/skel/.config/kiro-hyprland-noctalia/hyprland.lua
+#  KEYBINDINGS — Kiro Hyprland (noctura)
+#  Source: etc/skel/.config/kiro-hyprland-noctura/hyprland.lua
 #  Shell:  noctalia-shell (launcher / control center / lock / wallpaper)
 ###############################################################################
 
@@ -94,6 +94,16 @@
   super + J               Toggle split
   super + I               Add master
   super + ctrl + Space    Swap with master
+
+── 5. Wallpaper (Variety) ─────────────────────────────────────────────────────
+  alt + n                 Variety: next wallpaper
+  alt + p                 Variety: previous wallpaper
+  alt + t                 Variety: trash wallpaper
+  alt + f                 Variety: favorite wallpaper
+  alt + Left              Variety: previous wallpaper
+  alt + Right             Variety: next wallpaper
+  alt + Up                Variety: toggle pause
+  alt + Down              Variety: resume
 
 ── 6. Multimedia & Hardware ───────────────────────────────────────────────────
   XF86AudioRaiseVolume    Volume up

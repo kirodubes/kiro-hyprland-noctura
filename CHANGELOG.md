@@ -23,6 +23,13 @@
   PKGBUILD (was still pointing at the noctalia path). noctura is a **standalone
   personal edition** — the `conflicts=('kiro-hyprland-noctalia' 'kiro-noctalia')`
   is intentional (not meant to co-install with the noctalia editions).
+- **Added the missing Variety keybinds** to match ohmychadwm: `ALT+Left`
+  (previous), `ALT+Right` (next), `ALT+Up` (toggle pause), `ALT+Down` (resume) —
+  alongside the existing `ALT+n/p/t/f`. Added a "5. Wallpaper (Variety)" section
+  to `keybindings.txt` (was absent) and fixed its stale `noctalia` header. The
+  ohmychadwm pywal-recolor variants (`ALT+SHIFT+…`) and the `SUPER+CTRL+Space`
+  selector were **not** ported: noctura themes via noctalia/matugen (no pywal),
+  and `SUPER+CTRL+Space` is already "swap with master".
 - **Added a "Dual-monitor setup" tutorial to the README** walking users through
   `hyprctl monitors`, declaring two screens, the optional 10 + 10 workspace split
   (`SUPER` = left screen, `SUPER + ALT` = right), per-app workspace pinning, and
@@ -51,6 +58,7 @@
 **Files Modified**
 - `etc/skel/.config/kiro-hyprland-noctura/hyprland.lua`
 - new `etc/skel/.config/kiro-hyprland-noctura/hyprland-hq-dualscreen.lua`
+- `etc/skel/.config/kiro-hyprland-noctura/keybindings.txt` (Variety section)
 - `../KIROTUX-PKG-BUILD/kiro-hyprland-noctura/PKGBUILD` (golden-copy path)
 - `README.md`, `CLAUDE.md`
 - removed `etc/skel/.config/kiro-hyprland-noctura/hyprland.lua.bak-before-dualws`

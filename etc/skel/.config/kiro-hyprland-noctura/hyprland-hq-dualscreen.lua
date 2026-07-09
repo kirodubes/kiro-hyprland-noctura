@@ -439,6 +439,10 @@ bind("ALT + n", "Variety --next", run("variety -n"))
 bind("ALT + p", "Variety --previous", run("variety -p"))
 bind("ALT + t", "Variety --trash", run("variety -t"))
 bind("ALT + f", "Variety --favorite", run("variety -f"))
+bind("ALT + Left",  "Variety previous",     run("variety -p"))
+bind("ALT + Right", "Variety next",         run("variety -n"))
+bind("ALT + Up",    "Variety toggle pause", run("variety --toggle-pause"))
+bind("ALT + Down",  "Variety resume",       run("variety --resume"))
 
 -- flameshot
 bind(mod .. " + CTRL + Print",       "Flameshot",  run("flameshot gui"))
