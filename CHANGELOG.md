@@ -8,6 +8,7 @@
 ### Technical Details
 - Same `hyprland.lua` changes as kiro-hyprland-noctalia, in both `hyprland.lua` and `hyprland-hq-dualscreen.lua` (helper → `noctalia msg`, autostart `noctalia`, float rule for the Settings window).
 - Noctura's own v4 noctalia folder (JSON + the QML polkit-agent plugin) replaced by `00-kiro.toml`, ported from noctura's v4 choices: wallpaper-generated palette (m3-tonal-spot), bar opacity 0.83 / font scale 1.07 / spacing 8, empty bar centre, launcher without categories, auto-hide dock, built-in polkit agent, no welcome wizard. Still conflicts with kiro-noctalia (same path). Recipe depends on `noctalia`.
+- Dock: `reserve_space = false`. v5 keeps an auto-hidden dock's strip reserved by default, which left a 76 px empty gap under tiled windows (found on a real-metal install).
 
 ### Files Modified
 - etc/skel/.config/kiro-hyprland-noctura/hyprland.lua, hyprland-hq-dualscreen.lua, keybindings.txt
