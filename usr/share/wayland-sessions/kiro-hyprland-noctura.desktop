@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Kiro Hyprland Noctura
-Comment=Kiro Hyprland edition (Hyprland + noctalia-shell)
+Comment=Kiro Hyprland edition (Hyprland + noctalia)
 Exec=kiro-hyprland-noctura-session
 Type=Application
 DesktopNames=Hyprland

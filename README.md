@@ -1,11 +1,11 @@
 # kiro-hyprland-noctura
 
 The **Kiro Hyprland (noctura) edition** — a Hyprland member of the KIROTUX
-Wayland line, paired with the **noctalia-shell** desktop shell. Public,
+Wayland line, paired with the **noctalia** (v5) desktop shell. Public,
 open-core, shipped through the Kiro package repo (`nemesis_repo`).
 
 Sibling to [kiro-hyprland-noctalia](../kiro-hyprland-noctalia/) (the same
-Hyprland + noctalia-shell base) and [kiro-niri-noctalia](../kiro-niri-noctalia/)
+Hyprland + noctalia base) and [kiro-niri-noctalia](../kiro-niri-noctalia/)
 (niri + noctalia).
 
 ## What it is
@@ -13,8 +13,8 @@ Hyprland + noctalia-shell base) and [kiro-niri-noctalia](../kiro-niri-noctalia/)
 A ready-to-run Hyprland desktop configured the Kiro way: SUPER-based keybinds,
 Kiro app defaults, Tokyo Night accents, and the whole shell (bar, launcher, lock
 screen, notifications, wallpaper, control center, session menu, polkit agent)
-provided by **noctalia-shell** (Quickshell v4). Hyprland is only the compositor;
-everything else is noctalia, driven over `qs -c noctalia-shell ipc call`.
+provided by **noctalia** v5 (native shell from Arch `[extra]`). Hyprland is only the compositor;
+everything else is noctalia, driven over `noctalia msg`.
 
 The edition is fully namespaced: its config lives in
 `~/.config/kiro-hyprland-noctura/` and it ships its own display-manager session
@@ -28,7 +28,7 @@ clobbering `~/.config/hypr/`.
 - `etc/skel/.config/kiro-hyprland-noctura/scripts/import-gsettings.sh` — mirrors GTK theme into gsettings
 - `etc/skel/.config/kiro-hyprland-noctura/bg/kiro.jpg` — Kiro wallpaper
 - `etc/skel/.config/kiro-hyprland-noctura/keybindings.txt` — keybinding reference
-- `etc/skel/.config/noctalia/{settings,colors,plugins}.json` — noctalia-shell config
+- `etc/skel/.config/noctalia/00-kiro.toml` — noctura's own noctalia v5 config (conflicts with `kiro-noctalia`)
 - `usr/bin/kiro-hyprland-noctura-session` — session wrapper (`Hyprland --config …`)
 - `usr/share/wayland-sessions/kiro-hyprland-noctura.desktop` — "Kiro Hyprland Noctura" login entry
 

@@ -1,7 +1,7 @@
 ###############################################################################
 #  KEYBINDINGS — Kiro Hyprland (noctura)
 #  Source: etc/skel/.config/kiro-hyprland-noctura/hyprland.lua
-#  Shell:  noctalia-shell (launcher / control center / lock / wallpaper)
+#  Shell:  noctalia (launcher / control center / lock / wallpaper)
 ###############################################################################
 
 ── 1. Applications & Launchers ────────────────────────────────────────────────

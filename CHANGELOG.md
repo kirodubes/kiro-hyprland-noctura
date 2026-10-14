@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026.10.14
+
+### What Changed
+- Moved the edition to noctalia v5. noctalia-shell v4 (Quickshell) broke on Qt 6.12: noctalia-qs was built against Qt 6.11, so every themed widget got an undefined colour and the bar rendered as empty pills. v4 is unmaintained upstream and [cachyos] now ships v5 under the noctalia-shell name without shell.qml. Native noctalia v5.2.1 from Arch [extra] was live-tested on a real-metal test box and works.
+
+### Technical Details
+- Same `hyprland.lua` changes as kiro-hyprland-noctalia, in both `hyprland.lua` and `hyprland-hq-dualscreen.lua` (helper → `noctalia msg`, autostart `noctalia`, float rule for the Settings window).
+- Noctura's own v4 noctalia folder (JSON + the QML polkit-agent plugin) replaced by `00-kiro.toml`, ported from noctura's v4 choices: wallpaper-generated palette (m3-tonal-spot), bar opacity 0.83 / font scale 1.07 / spacing 8, empty bar centre, launcher without categories, auto-hide dock, built-in polkit agent, no welcome wizard. Still conflicts with kiro-noctalia (same path). Recipe depends on `noctalia`.
+
+### Files Modified
+- etc/skel/.config/kiro-hyprland-noctura/hyprland.lua, hyprland-hq-dualscreen.lua, keybindings.txt
+- etc/skel/.config/noctalia/00-kiro.toml (new); v4 JSON + plugins/polkit-agent/ (removed)
+- usr/share/wayland-sessions/kiro-hyprland-noctura.desktop
+- README.md, CLAUDE.md
+
 ## 2026.10.10
 
 ### What Changed

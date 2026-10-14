@@ -1,0 +1,36 @@
+# Kiro Hyprland Noctura defaults for noctalia v5 (native shell, [extra]/noctalia).
+# Ported from noctura's v4 settings.json on 2026-10-14; only the values that
+# differ from noctalia's built-in defaults live here.
+# Files in ~/.config/noctalia/ merge alphabetically, so a later config.toml
+# overrides this one; changes made in Settings land in
+# ~/.local/state/noctalia/settings.toml and win over both.
+
+[shell]
+font_family          = "Noto Sans"
+telemetry_enabled    = false
+# The ISO and installs come preconfigured; skip the first-run welcome wizard.
+setup_wizard_enabled = false
+# v4 shipped the polkit-agent plugin; v5 has the agent built in.
+polkit_agent         = true
+
+[shell.launcher]
+categories = false
+
+[theme]
+mode             = "dark"
+# v4 generated the palette from the wallpaper (tonal-spot).
+source           = "wallpaper"
+wallpaper_scheme = "m3-tonal-spot"
+
+[bar.main]
+position           = "top"
+background_opacity = 0.83
+font_scale         = 1.07
+widget_spacing     = 8
+start              = ["launcher", "active_window", "workspaces"]
+center             = []
+end                = ["sysmon", "clock", "media", "tray", "notifications", "network", "bluetooth", "battery", "volume", "brightness", "control-center"]
+
+[dock]
+enabled   = true
+auto_hide = true
