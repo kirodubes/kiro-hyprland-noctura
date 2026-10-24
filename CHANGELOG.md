@@ -6,6 +6,7 @@
 - **Hyprland now starts through `start-hyprland`.** The session wrapper ran Hyprland directly under uwsm, so Hyprland 0.56 logged "launched without start-hyprland" and had no watchdog. `start-hyprland` runs Hyprland with `--watchdog-fd`, so a crashed or hung compositor can be recovered. Reaches every install with the package update; nothing to do in `~/.config`. Same change as kiro-hyprland-dms and kiro-hyprland-noctalia, which were tested with 4 logins each on real hardware.
 - **New keybindings from ohmychadwm, where the key was free:** Super+K keybindings cheatsheet, Super+Shift+F file manager, Super+Shift+N editor, Super+Shift+B browser, Super+Shift+M Spotify, Super+Ctrl+Shift+A AI agent (`claude` in the terminal), Super+Ctrl+A volume control, Super+Ctrl+L lock screen (noctalia), the mic-mute key and Alt+volume keys for 1% steps (`wpctl`, so the noctalia OSD shows). New installs only (skel). Existing users: copy the new `bind(...)` lines from `/etc/skel/.config/kiro-hyprland-noctura/hyprland.lua` into `~/.config/kiro-hyprland-noctura/hyprland.lua`.
 
+- Cleanup: `Ctrl+Alt+Return` (terminal) was bound twice; the stray copy under the screenshot binds is gone, the one in the Ctrl+Alt launcher group stays. No change in behaviour.
 ### Technical Details
 - `exec uwsm start -- Hyprland --config …` → `exec uwsm start -e -D Hyprland -- start-hyprland -- --config …`. `start-hyprland` passes everything after `--` to Hyprland and adds `--watchdog-fd`.
 - `-e -D Hyprland` keeps `XDG_CURRENT_DESKTOP=Hyprland`, so xdg-desktop-portal still picks the Hyprland backend.
