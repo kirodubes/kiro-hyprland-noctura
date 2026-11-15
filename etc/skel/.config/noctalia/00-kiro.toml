@@ -38,15 +38,16 @@ auto_hide     = true
 # empty gap under tiled windows.
 reserve_space = false
 
-# Screen off after 15 min idle, like XFCE. noctalia ships it disabled.
+# Screen off after 15 min idle, like XFCE. noctalia ships it disabled. Commands run in a shell
+# (noctalia 5.4.1 has no `noctalia:` prefix: the upstream example's `noctalia:dpms-off` did nothing).
 [idle.behavior.screen-off]
 timeout        = 900
-command        = "noctalia:dpms-off"
-resume_command = "noctalia:dpms-on"
+command        = "noctalia msg dpms-off"
+resume_command = "noctalia msg dpms-on"
 enabled        = true
 
 # Present but off: Kiro never locks on idle by default. Turn it on in Settings.
 [idle.behavior.lock]
 timeout = 900
-command = "noctalia:session lock"
+command = "noctalia msg session lock"
 enabled = false

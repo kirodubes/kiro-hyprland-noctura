@@ -7,9 +7,12 @@
   the screen never went off. The idle lock is listed too, at 15 minutes, but stays off: turn it on in Settings.
 
 ### Technical Details
-- `00-kiro.toml`: `[idle.behavior.screen-off]` (timeout 900, `noctalia:dpms-off` / `noctalia:dpms-on`,
-  enabled) and `[idle.behavior.lock]` (timeout 900, `noctalia:session lock`, enabled = false). Keys from noctalia's
-  `example.toml` and `src/config/schema/config_schema.cpp` (`idle.behavior`).
+- `00-kiro.toml`: `[idle.behavior.screen-off]` (timeout 900, `noctalia msg dpms-off` / `noctalia msg dpms-on`,
+  enabled) and `[idle.behavior.lock]` (timeout 900, `noctalia msg session lock`, enabled = false). Keys from
+  noctalia's `example.toml` and `src/config/schema/config_schema.cpp` (`idle.behavior`).
+- The commands run in a shell. The upstream example's `noctalia:dpms-off` form does not exist in noctalia 5.4.1:
+  on picard (niri noctalia) the idle step fired at 15 min but the screen stayed on; with `noctalia msg dpms-off`
+  the screen went black at 30 s (test timeout). Built first as 26.11-01/26.11-02 with the broken form.
 - Reaches new installs only (`/etc/skel`); existing installs get it with `skell`. Same change in kiro-noctalia (the shared copy for the other noctalia editions).
 
 ### Files Modified
