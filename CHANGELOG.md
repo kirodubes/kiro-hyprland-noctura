@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026.11.15
+
+### What Changed
+- The screen now turns off after 15 minutes idle, like XFCE. noctalia ships its screen-off idle step disabled, so
+  the screen never went off. The idle lock is listed too, at 15 minutes, but stays off: turn it on in Settings.
+
+### Technical Details
+- `00-kiro.toml`: `[idle.behavior.screen-off]` (timeout 900, `noctalia:dpms-off` / `noctalia:dpms-on`,
+  enabled) and `[idle.behavior.lock]` (timeout 900, `noctalia:session lock`, enabled = false). Keys from noctalia's
+  `example.toml` and `src/config/schema/config_schema.cpp` (`idle.behavior`).
+- Reaches new installs only (`/etc/skel`); existing installs get it with `skell`. Same change in kiro-noctalia (the shared copy for the other noctalia editions).
+
+### Files Modified
+- `etc/skel/.config/noctalia/00-kiro.toml`
+
 ## 2026.11.03
 
 ### What Changed
